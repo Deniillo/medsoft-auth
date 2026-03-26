@@ -1,8 +1,6 @@
 package itmo.medsoft.model
 
-import itmo.medsoft.model.enum.HashAlgorithm
 import jakarta.persistence.*
-import java.awt.Stroke
 import java.time.LocalDateTime
 
 @Entity
