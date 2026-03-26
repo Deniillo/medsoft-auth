@@ -1,3 +1,20 @@
 spring:
   application:
     name: medsoft
+
+  datasource:
+    url: jdbc:postgresql://postgres:5432/auth_db
+    username: user
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.security: DEBUG

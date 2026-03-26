@@ -3,7 +3,7 @@ package itmo.medsoft
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = ["itmo.medsoft"])
 class MedsoftApplication
 
 fun main(args: Array<String>) {
