@@ -24,3 +24,7 @@ server:
 logging:
   level:
     org.springframework.security: DEBUG
+
+app:
+  crypto:
+    key: ${APP_CRYPTO_KEY:default-secret-key-123}

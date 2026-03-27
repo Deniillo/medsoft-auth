@@ -33,7 +33,7 @@ class AuthService(
         return saved.id
     }
 
-    fun login(login: String, password: String): Boolean {
+    fun login(login: String, password: String): User {
 
         val user = userRepository.findByLogin(login)
             .orElseThrow { IllegalArgumentException("Invalid credentials") }
@@ -48,6 +48,6 @@ class AuthService(
             throw IllegalArgumentException("Invalid credentials")
         }
 
-        return true
+        return user
     }
 }

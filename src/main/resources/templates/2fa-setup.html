@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Setup 2FA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+<div class="bg-white p-8 rounded shadow-md w-[420px] text-center">
+
+    <h1 class="text-2xl font-bold mb-4">Setup 2FA</h1>
+
+    <p class="mb-4 text-gray-600">
+        Scan this QR code with your authenticator app
+    </p>
+
+    <img th:src="'data:image/png;base64,' + ${qr}"
+         class="mx-auto mb-4 border p-2 rounded"/>
+
+    <p class="text-sm text-gray-500 mb-4">
+        Or enter manually:
+    </p>
+
+    <div class="bg-gray-100 p-2 rounded text-sm break-all mb-6"
+         th:text="${secret}">
+    </div>
+
+    <form method="post" action="/2fa/confirm" class="space-y-4">
+        <input name="code"
+               placeholder="Enter 6-digit code"
+               class="w-full border rounded px-3 py-2 text-center text-lg tracking-widest"/>
+
+        <button type="submit"
+                class="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">
+            Confirm
+        </button>
+    </form>
+
+</div>
+
+</body>
+</html>

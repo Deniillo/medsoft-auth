@@ -42,6 +42,11 @@ dependencies {
 	implementation("org.springframework.security:spring-security-crypto")
 	implementation("org.bouncycastle:bcprov-jdk18on:1.76")
 
+	// 2FA
+	implementation("commons-codec:commons-codec:1.16.0")
+	implementation("com.google.zxing:core:3.5.1")
+	implementation("com.google.zxing:javase:3.5.1")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-data-jpa-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-security-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-thymeleaf-test")

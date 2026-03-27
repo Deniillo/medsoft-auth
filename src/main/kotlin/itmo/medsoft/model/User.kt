@@ -20,5 +20,11 @@ class User(
     @Column(nullable = false)
     val algorithm: String,
 
+    @Column(nullable = true)
+    var totpSecret: String? = null,
+
+    @Column(nullable = false)
+    var totpEnabled: Boolean = false,
+
     val createdAt: LocalDateTime = LocalDateTime.now()
 )

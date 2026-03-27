@@ -19,6 +19,7 @@ class SecurityConfig {
                     .requestMatchers("/auth/**").permitAll()
                     .requestMatchers("/register", "/login").permitAll()
                     .requestMatchers("/profile", "/logout").permitAll()
+                    .requestMatchers("/2fa/**").permitAll()
                     .anyRequest().authenticated()
             }
         return http.build()
