@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+<div class="bg-white p-8 rounded shadow-md w-96">
+    <h1 class="text-2xl font-bold mb-6">Profile</h1>
+
+    <div th:if="${login}">
+        <p><strong>Login:</strong> <span th:text="${login}"></span></p>
+        <p><strong>Account created at:</strong> <span th:text="${createdAt}"></span></p>
+    </div>
+
+    <div th:if="${error}" class="text-red-600">
+        <p th:text="${error}"></p>
+    </div>
+
+    <div class="mt-4">
+        <a href="/logout" class="text-blue-500 hover:underline">Logout</a>
+    </div>
+</div>
+</body>
+</html>
